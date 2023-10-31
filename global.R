@@ -11,7 +11,7 @@ data_age <- read.csv("https://co-analysis.github.io/acses_data_browser_2023/Age/
   mutate(across(any_of(c("Headcount","FTE","Mean_salary","Median_salary")),as.numeric))
 
 ################################################################################
-# Example 4 - dynamic UI
+# Example 3 - user input
 
 # Get a list of available variables from the data browser meta data
 cs_stats_vars <- read.csv("https://co-analysis.github.io/acses_data_browser_2023/metadata/var_values.csv") %>%
