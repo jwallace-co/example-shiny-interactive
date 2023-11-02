@@ -121,10 +121,10 @@ server <- function(input,output) {
     data
   })
 
-  # Code for the graph is as before
+  # We can now use the filtered data in the graph
   output$var_graph_ex5 <- renderPlot({
     # data is called using the reactive function - when the inputs used in that function update, this graph will also update
-    data <- get_data_ex5()
+    data <- filtered_data_ex5()
     
     # The resulting dynamic data is then used to build the graph
     data %>%
@@ -132,10 +132,10 @@ server <- function(input,output) {
       geom_col()
   })
   
-  # And we can now use the filtered data in the table
+  # Code for the table is as before
   output$var_table_ex5 <- renderTable({
     # Data is again called using the reactive function - when the inputs used in that function update, this table will also update
-    filtered_data_ex5()
+    get_data_ex5()
   })
   
   ################################################################################
