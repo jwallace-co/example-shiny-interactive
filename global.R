@@ -17,4 +17,5 @@ data_age <- read.csv("https://co-analysis.github.io/acses_data_browser_2023/Age/
 cs_stats_vars <- read.csv("https://co-analysis.github.io/acses_data_browser_2023/metadata/var_values.csv") %>%
   pull(var) %>%
   unique() %>%
-  setdiff(c("Status","Year"))
+  setdiff(c("Status","Year")) %>%
+  sort()
