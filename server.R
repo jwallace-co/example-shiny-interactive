@@ -102,6 +102,7 @@ server <- function(input,output) {
     # Define a UI element using this list of values
     # the syntax is exactly the same as you would use if making a static element in ui.R
     checkboxGroupInput("value_filter_ex5",label="Choose values to show",choices=values,selected=values,inline=TRUE)
+    
     # be careful to note that the 'inputId' is defined here, rather than in ui.R
     # and that this is different to the 'outputId' the UI element is assigned to
   })
